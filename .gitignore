@@ -1,1 +1,5 @@
-
+.deta/
+.DS_Store
+.idea/
+_pycache_/
+*.db
