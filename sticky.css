@@ -7,4 +7,15 @@
     justify-content: center;
     /* flex-direction: column; */
 }
+ .three{
+    padding-left: 20px;
+    padding-top: 20px;
+    
+    top: 5px;
+
+}
+.five{
+	position: sticky;
+	top: 0;
+}
 
