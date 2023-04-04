@@ -1,0 +1,10 @@
+.one {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.four{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
