@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: #fff;
+    margin-top: 200px;
+    text-align: center;
+    font-size: 50px;
+}
+img {
+    margin-left: 90px;
+    margin-top: 40px;
+}
+.one {
+    background-image: url("netbg.jpg");
+    height: 740px; 
+}
+h4{
+    color: white;
+    font-size: 27px;
+    text-align: center;
+    padding: 10px 10px;
+}
+p{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    padding: 10px 10px;
+}
+.two{
+    display: flex;
+    justify-content: center;
+}
+li {
+    list-style: none;
+    padding: 10px 10px 10px 10px;
+  }
+ul {
+    display: flex;
+  }
+li h3{
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    padding: 10px 20px 10px 10px; 
+}
+li input{
+    padding: 10px 10px 10px 10px;
+}
+body{ background-color: #000;
+        color: #fff;
+            
+}
+.three h2{   
+    padding: 20px;  
+}
+.three h1{
+    text-align: left;
+    padding-left: 20px;
+}
+.three{
+    border-top: 10px solid grey;
+    padding-left: 50px;
+}
+
+.four{
+    color: #fff;
+    background-color: #000;
+    border-top: 10px solid grey;
+    
+}
+.four h1{
+    text-align: right;
+    font-size: 40px;
+    padding: 0 260px;
+}
+.four h2{
+    text-align: right;
+    padding-top: 20px;
+    padding: 0 120px;
+}
+ img{
+    display: flex;
+    justify-content: center;
+  margin-left: 20px;
+  margin-right: auto;
+  
+  
+
+}
+.five{
+    background-color: #000;
+    color: #fff;
+    font-size: 40px;
+    border-top: 10px solid grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
