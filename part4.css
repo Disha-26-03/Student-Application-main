@@ -1,0 +1,49 @@
+body{
+    
+    background-image: linear-gradient(aquamarine, rgb(89, 53, 252));
+    height: 715px;
+}
+.tab{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.tab button{
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.tab button:hover{
+    background-color: red;
+
+}
+.tab button.active{
+    background-color: #ddd;
+}
+
+.tabcontent{
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+#one{
+    display: block;
+}
+.tabcontent p{
+color: yellow;
+}
+.wrapper{
+    height: 300px;
+    width: 500px;
+    margin: auto;
+}
+
+
+
+
+
