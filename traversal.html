@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversal</title>
+    <link href="traversal.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="boxes">
+            <div class="box">
+                <h2>Box 1</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, itaque et unde molestiae atque repellendus aut numquam quas sed facilis, pariatur doloribus similique ut voluptatem deserunt? Deleniti voluptatum magni accusamus.</p>
+                <a href="">Show Box</a>
+            </div>
+            <div class="box">
+                <h2>Box 2</h2>
+                <p>Ipsum, assumenda. Sunt, vitae hic consequuntur dicta necessitatibus obcaecati! Vel ea veritatis fuga exercitationem neque rerum, explicabo a nisi placeat quis dolore voluptatibus quod aut nam maxime blanditiis qui velit.</p>
+                <a href="">Show Box</a>
+            </div>
+            <div class="box">
+                <h2>Box 3</h2>
+                <p>Consequatur corrupti repudiandae sed nemo libero praesentium qui sequi veniam vero quasi numquam quaerat inventore assumenda cumque architecto ullam, expedita odio? Architecto quisquam similique corporis cum autem perspi</p>
+                <a href="">Show Box</a>
+            </div>
+            <div class="box">
+                <h2>Box 4</h2>
+                <p>Sunt quaerat dignissimos totam architecto commodi doloremque placeat sequi saepe, iste molestias dolorum sapiente, rem officia quod magni! Eaque sit debitis dolore eligendi excepturi reprehenderit hic accusantium, sequi ratione molestiae.</p>
+                <a href="">Show Box</a>
+            </div>
+        </div>
+    </div>
+<script>
+    
+
+// const boxes = document.querySelectorAll('.box')
+// boxes.forEach(box => {
+  
+//   const heading = box.querySelector('h2');
+//   const paragraph = box.querySelector('p');
+
+
+//   heading.addEventListener('click', () => {
+   
+//     heading.remove();
+//     paragraph.remove();
+
+//   });
+
+
+// });
+
+const heading = document.querySelectorAll("h2");
+  const anchor = document.querySelectorAll("a");
+  for(let i=0;i<heading.length;i++){
+    heading[i].addEventListener("click",function(){
+        heading[i].style.display="none";
+        heading[i].nextElementSibling.style.display="none";
+
+    })
+    anchor[i].addEventListener("click",function(){
+        event.preventDefault();
+        anchor[i].preventElementSibling.previousElementSibling.style.display="block"
+        anchor[i].preventElementSibling.style.display="block"
+        anchor[i].style.display="none"
+    })
+  }
+
+
+
+
+</script>
+</body>
+</html>
