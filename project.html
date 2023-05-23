@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="wrapper"> -->
+        <input type="text" placeholder="enter your name">
+        <button class="add" type="submit">add to array</button>
+        <button class="print"type="submit">print array</button>
+        <p></p>
+    <!-- </div> -->
+    <script>
+//         let b=document.querySelector("input")
+//  b.onblur= ()=> {
+//     const para= document.createElement("p")
+//   para.innerHTML= b.value.split('').reverse('').join('')
+//   document.querySelector("#wrapper").append(para)
+ 
+//  }
+        
+ let array=[];
+    let input=document.querySelector("input");
+    let add=document.querySelector(".add");
+    let print=document.querySelector(".print");
+    let output=document.querySelector("p")
+    add.onclick=()=>{
+        array.push(input.value);
+        console.log(array);
+        input.value="";
+    }
+    print.onclick=()=>{
+      let i=0;
+      let x= setInterval(()=>{
+        if(i === array.length-1){
+            clearInterval(x);
+            output.innerHTML += array[i++]
+        }else{
+            output.innerHTML += array[i++]+"  "
+        }
+      },1000)
+
+    }
+    
+
+    </script>
+</body>
+</html>
