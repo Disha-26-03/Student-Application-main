@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Matching</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #wrapper{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+    }
+    #gameBoard{
+        width: 50vw;
+        min-width: 200px;
+        max-width: 400px;
+        padding: 10px;
+        border-radius: 1rem;
+        background-color: #fff;
+        border: 3px solid #121212;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #gameBoard .fruit{
+        width: 17%;
+        height: 20px;
+        margin: 0.25rem;
+        border: 1px solid #121212;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease-out;
+    }
+    #gameBoard .fruit:hover{
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="gameBoard">
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+            <div class="fruit"></div>
+        </div>
+    </div>
+    <script>
+        const fruits=document.querySelectorAll(".fruit")
+        function giveRandomColor(elem){
+            var letter = "0123456789ABCDEF";
+            for(var j=0; j<fruits.length; j++){
+            var color = "#";
+            for (var i = 0; i < 6; i++) 
+            color += letter[Math.floor(Math.random() *letter.length)];
+            fruits[j].style.background=color;
+            }
+              
+        }
+        
+        giveRandomColor(fruits)
+        fruits.forEach((fruit)=>{
+            fruit.addEventListener("click",() =>{
+                fruit.remove();
+            });
+        });
+
+
+    
+    </script>
+</body>
+</html>
