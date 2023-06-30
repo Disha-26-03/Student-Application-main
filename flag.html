@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flag</title>
+  <style>
+    body{
+      background-color: rgb(158, 249, 249);
+    }
+    #box1{
+      border: 3px solid black;
+      background-color: rgb(215, 214, 214);
+      width: 350px;
+      height: 350px;
+      padding-top: 30px;
+      padding-left: 30px;
+      margin-top: 40px;
+
+    }
+    #box2{
+      background-color: rgb(215, 214, 214);
+      width: 350px;
+      height: 380px;
+      margin-top: 50px;
+      border: 3px solid black;
+      display:flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    #wrapper{
+      display:flex;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+    button{
+      width: 80px;
+      height: 40px;
+      background-color: rgb(254, 192, 77);
+      
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="box1">
+      <input type="text" placeholder="country name" width="100px" height="30px"><br><br>
+      <button>Get Flag</button>
+    </div>
+    <div id="box2"></div>
+
+  </div>
+  <script>
+  let b=document.querySelector("input");
+  let c=document.querySelector("button");
+c.onclick=((event) =>{
+event.preventDefault()
+let d=document.querySelector("#box2")
+d.innerHTML="";
+fetch("https://flagcdn.com/en/codes.json").then((response)=>{return response.json()})
+.then((result)=>{
+console.log(result);
+displayflag(result);
+  })
+})
+function displayflag(result){
+   let fname=b.value;
+   let flagsCapitals=fname.charAt(0).toUpperCase()+fname.slice(1).toLowerCase()
+
+  for(let [key, value] of Object.entries(result))
+{ 
+  if(value === flagsCapitals){
+     let img=document.createElement("img");
+     img.src="https://flagcdn.com/160x120/"+([key][0])+".png";
+     document.querySelector("#box2").append(img);
+     }
+}
+}
+</script>
+</body>
+</html>
+</html>
+
+  
+
